@@ -2,6 +2,7 @@
 /**
  * _islower - shows 1 if the input is lower case and other cases if
  * 0
+ * @c : the character in ACSII code
  *
  * Return: 1 for lower case. 0 for ther cases.
  */
