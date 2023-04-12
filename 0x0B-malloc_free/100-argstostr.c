@@ -6,7 +6,7 @@
  * @ac: arguments count in main
  * @av: arguments passed to main.
  *
- * REturn: result
+ * Return: a pointer to a new string or nothing.
  */
 
 char *argstostr(int ac, char **av)
