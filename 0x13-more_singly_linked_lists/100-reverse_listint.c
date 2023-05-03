@@ -11,22 +11,19 @@
 
 listint_t *reverse_listint(listint_t **head)
 {
-	listint_t *a = NULL;
-	listint_t *b = NULL;
+	listint_t *a, *b;
 
-	if (head)
+	if (!head)
+		return (NULL);
+
+	a = NULL;
+	while (*head)
 	{
-		while (*head != NULL)
-		{
-			b = *head;
-			*head = (*head)->next;
-			b->next = a;
-			a = b;
-		}
-		*head = a;
-		return (*head);
+		b = (*head)->next;
+		(*head)->next = a;
+		a = *head;
+		*head = b;
 	}
-
-	return (NULL);
+	*head = a;
+	return (*head);
 }
-
